@@ -8,9 +8,18 @@ export class Input {
   convertToNum() {
     if ((isNaN(this.inputAge)) || (isNaN(this.inputExpectancy)))  {
       return "enter a number."
+    } else if ((typeof this.inputAge === 'string') || (typeof this.inputExpectancy === 'string')) {
+      let age = parseInt(this.inputAge);
+      let expectancy = parseInt(this.inputExpectancy);
+      this.age += age;
+      this.expectancy += expectancy;
+      return this.age + " " + this.expectancy;
+    } else {
+      this.age += this.inputAge;
+      this.expectancy += this.inputExpectancy;
+      return this.age + " " + this.expectancy;
     }
-    // let age = parseInt(this.inputAge);
-    // let expectancy = parseInt(this.inputExpectancy);
+
     // expect(newNum.convertToNum()).toEqual("You are 26 years old and should live to be 100 years old.");
   }
 }
