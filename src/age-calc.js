@@ -1,6 +1,7 @@
 export function Input(inputAge,inputExpectancy) {
     this.inputAge = inputAge;
     this.inputExpectancy = inputExpectancy;
+    this.earthYear = 365;
     this.age = 0;
     this.expectancy = 0;
   }
@@ -22,12 +23,21 @@ export function Input(inputAge,inputExpectancy) {
 
   }
 
+  Input.prototype.toDays = function() {
+    let earthDays = (this.inputAge * this.earthYear);
+    return earthDays;
+  }
+
 
 export function Mercury(age,expectancy) {
     const mercYear = 87.97;
     this.newAge = 0;
     this.newExpectancy = 0;
-    this.earthAge = age;
+    this.earthDays = age;
     this.earthExpectancy = expectancy;
+
+  }
+
+  Mercury.prototype.mercAge = function() {
 
   }
