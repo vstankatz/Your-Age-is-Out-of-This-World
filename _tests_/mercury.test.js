@@ -1,16 +1,11 @@
-import {Mercury} from "./../src/merc-calc.js";
-const mercInput = require("./../src/age-calc");
-
+import {Mercury} from "./../src/age-calc.js";
 
 
 describe('Mercury', () => {
 
-  test('Should take in the variables', () => {
-    let mercAge = new Mercury();
-    jest.mock("./../src/age-calc", () => {
-      return jest.fn(() => 26,100);
-    });
-    expect(mercAge.age).toEqual(26);
-    expect(mercAge.inputExpectancy).toEqual(100);
+  test('should take in the variable', () => {
+    let newVar = new Mercury(26,100);
+    expect(newVar.earthAge).toEqual(26);
+    expect(newVar.earthExpectancy).toEqual(100);
   });
 });
