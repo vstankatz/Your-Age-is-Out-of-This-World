@@ -25,6 +25,6 @@ describe('Input', () => {
 
   test('should multiply the age by 365', () => {
     let newAge = new Input(26, 0);
-    expect(newAge.toDays()).toEqual(9490)
+    expect(newAge.toDays(newAge.age = newAge.inputAge)).toEqual(9490)
   });
 });

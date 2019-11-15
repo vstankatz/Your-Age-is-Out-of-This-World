@@ -24,7 +24,7 @@ export function Input(inputAge,inputExpectancy) {
   }
 
   Input.prototype.toDays = function() {
-    let earthDays = (this.inputAge * this.earthYear);
+    let earthDays = (this.age * this.earthYear);
     return earthDays;
   }
 
