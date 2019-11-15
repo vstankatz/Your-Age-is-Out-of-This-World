@@ -20,6 +20,5 @@ export class Input {
       return this.age + " " + this.expectancy;
     }
 
-    // expect(newNum.convertToNum()).toEqual("You are 26 years old and should live to be 100 years old.");
   }
 }
