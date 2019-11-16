@@ -63,4 +63,11 @@ describe('Input', () => {
     expect(newDeath.expectAndSee()).toEqual(27010)
   });
 
+  test('should make the number positive if they expectancy is surpassed', () => {
+    let newDeath = new Input(108,100);
+    newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
+    console.log(newDeath.ageDays);
+    expect(newDeath.expectAndSee()).toEqual(2920)
+  });
+
 });

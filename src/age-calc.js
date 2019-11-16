@@ -94,8 +94,8 @@ export class Input {
     if ((this.expectancyDays - this.ageDays) > 0){
       return this.earthTime;
     } else if ((this.expectancyDays - this.ageDays) < 0){
-        Math.abs(this.mercTime);
-        return this.mercTime
+        this.earthTime = Math.abs(this.earthTime);
+        return this.earthTime
     }
   }
 }
