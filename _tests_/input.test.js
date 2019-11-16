@@ -20,11 +20,18 @@ describe('Input', () => {
 
   test('should add original input to variables', () => {
     let newNum = new Input(26,100);
-    expect(newNum.convertToNum()).toEqual("26 100")
+    expect(newNum.convertToNum()).toEqual("26 100");
   });
 
-  test('should multiply the age by 365', () => {
-    let newAge = new Input(26, 0);
-    expect(newAge.toDays(newAge.age = newAge.inputAge)).toEqual(9490)
+  test('should multiply the years by 365', () => {
+    let newAge = new Input(26, 100);
+    expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy)) ).toEqual("9490 36500");
   });
+
+  // test('should multiply the expectancy by 365', () => {
+  //   let newExpect = new Input(26, 100);
+  //   console.log(newExpect.inputExpectancy);
+  //   console.log(newExpect.toDays(newExpect.expectancy));
+  //   expect(newExpect.toDays(newExpect.expectancy = newExpect.inputExpectancy)).toEqual(36500);
+  // });
 });

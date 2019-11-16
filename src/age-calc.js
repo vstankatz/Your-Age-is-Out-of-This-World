@@ -3,7 +3,9 @@ export function Input(inputAge,inputExpectancy) {
     this.inputExpectancy = inputExpectancy;
     this.earthYear = 365;
     this.age = 0;
+    this.ageDays = 0;
     this.expectancy = 0;
+    this.expectancyDays = 0;
   }
 
   Input.prototype.convertToNum = function() {
@@ -25,12 +27,15 @@ export function Input(inputAge,inputExpectancy) {
 
   Input.prototype.toDays = function() {
     let earthDays = (this.age * this.earthYear);
-    return earthDays;
+    let expectDays = (this.expectancy * this.earthYear);
+    this.earthDays += earthDays;
+    this.expectancyDays += expectDays;
+    return earthDays + " " + expectDays;
   }
 
 
 export function Mercury(age,expectancy) {
-    const mercYear = 87.97;
+  this.mercYear = 87.97;
     this.newAge = 0;
     this.newExpectancy = 0;
     this.earthDays = age;
