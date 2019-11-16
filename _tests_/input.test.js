@@ -56,12 +56,11 @@ describe('Input', () => {
     expect(newDays.jupiterCalc()).toEqual("800 3077")
   });
 
+  test('should subtract days lived form days expected', () => {
+    let newDeath = new Input(26,100);
+    newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
+    console.log(newDeath.ageDays);
+    expect(newDeath.expectAndSee()).toEqual(27010)
+  });
+
 });
-
-
-
-// test('should subtract days lived form days expected', () => {
-//   let newMerc = new Input(9490,36500);
-//   let daysLeft = newMerc.mercCalc();
-//   expect(daysLeft.expectAndSee()).toEqual("")
-// });

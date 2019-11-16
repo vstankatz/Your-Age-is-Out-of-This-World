@@ -11,14 +11,19 @@ export class Input {
     this.ageDays = 0;
     this.expectancy = 0;
     this.expectancyDays = 0;
+    this.earthTime = 0;
     this.mercAge = 0;
     this.mercExpectancy = 0;
+    this.mercTime = 0;
     this.venusAge = 0;
     this.venusExpectancy = 0;
+    this.venusTime = 0;
     this.marsAge = 0;
     this.marsExpectancy = 0;
+    this.marsTime = 0;
     this.jupiterAge = 0;
     this.jupiterExpectancy = 0;
+    this.jupiterTime = 0;
 
   }
 
@@ -78,6 +83,20 @@ export class Input {
     this.jupiterAge += jupiterDays;
     this.jupiterExpectancy += jupiterExpect;
     return jupiterDays + " " + jupiterExpect;
+  }
+
+  expectAndSee() {
+    this.earthTime = (this.expectancyDays - this.ageDays);
+    this.mercTime = (this.mercExpectancy - this.mercAge);
+    this.venusTime = (this.venusExpectancy - this.venusAge);
+    this.marsTime = (this.marsExpectancy - this.marsAge);
+    this.jupiterTime = (this.jupiterExpectancy - this.jupiterAge);
+    if ((this.expectancyDays - this.ageDays) > 0){
+      return this.earthTime;
+    } else if ((this.expectancyDays - this.ageDays) < 0){
+        Math.abs(this.mercTime);
+        return this.mercTime
+    }
   }
 }
 
