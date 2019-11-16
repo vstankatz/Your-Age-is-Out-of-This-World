@@ -67,14 +67,18 @@ describe('Input', () => {
     console.log(newDeath.mercAge);
     console.log(newDeath.mercExpectancy);
     console.log(newDeath.mercTime);
-    expect(newDeath.expectAndSee(newDeath.mercTime)).toEqual("You have this many days to live on each planet Earth: 135050, Mercury: 614, Venus: 361, Mars: 57468, Jupiter: 11387.");
+    expect(newDeath.expectAndSee()).toEqual("You have this many days to live on each planet-- Earth: 135050, Mercury: 614, Venus: 361, Mars: 57468, Jupiter: 11387.");
   });
 
   test('should make the number positive if they expectancy is surpassed', () => {
     let newDeath = new Input(108,100);
     newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
+    newDeath.mercCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.venusCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.marsCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.jupiterCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
     console.log(newDeath.ageDays);
-    expect(newDeath.expectAndSee()).toEqual(2920)
+    expect(newDeath.expectAndSee()).toEqual(("Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: 14600, Mercury: 67, Venus: 39, Mars: 6213, Jupiter: 1231."))
   });
 
 

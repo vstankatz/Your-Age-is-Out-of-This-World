@@ -93,10 +93,14 @@ export class Input {
     this.marsTime = (this.marsExpectancy - this.marsAge);
     this.jupiterTime = (this.jupiterExpectancy - this.jupiterAge);
     if ((this.expectancyDays - this.ageDays) > 0){
-      return `You have this many days to live on each planet Earth: ${this.earthTime}, Mercury: ${this.mercTime}, Venus: ${this.venusTime}, Mars: ${this.marsTime}, Jupiter: ${this.jupiterTime}.`
+      return `You have this many days to live on each planet-- Earth: ${this.earthTime}, Mercury: ${this.mercTime}, Venus: ${this.venusTime}, Mars: ${this.marsTime}, Jupiter: ${this.jupiterTime}.`
     } else if ((this.expectancyDays - this.ageDays) < 0){
         this.earthTime = Math.abs(this.earthTime);
-        return this.earthTime
+        this.mercTime = Math.abs(this.mercTime);
+        this.venusTime = Math.abs(this.venusTime);
+        this.marsTime = Math.abs(this.marsTime);
+        this.jupiterTime = Math.abs(this.jupiterTime);
+        return `Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: ${this.earthTime}, Mercury: ${this.mercTime}, Venus: ${this.venusTime}, Mars: ${this.marsTime}, Jupiter: ${this.jupiterTime}.`
     }
   }
 
