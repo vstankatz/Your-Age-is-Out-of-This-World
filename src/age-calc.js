@@ -66,3 +66,19 @@ export function Mercury(age,expectancy) {
     this.venusExpectancy += venusExpect;
     return venusDays + " " + venusExpect;
   }
+
+  export function Mars(age,expectancy) {
+    this.marsYear = 1.88;
+    this.marsAge = 0;
+    this.marsExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
+  }
+
+  Mars.prototype.marsCalc = function() {
+    let marsDays = parseInt(this.earthDays / this.marsYear);
+    let marsExpect = parseInt(this.earthExpectancy / this.marsYear);
+    this.marsAge += marsDays;
+    this.marsExpectancy += marsExpect;
+    return marsDays + " " + marsExpect;
+  }
