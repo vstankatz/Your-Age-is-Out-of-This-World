@@ -36,17 +36,25 @@ export function Input(inputAge,inputExpectancy) {
 
 export function Mercury(age,expectancy) {
     this.mercYear = 87.97;
-    this.newAge = 0;
-    this.newExpectancy = 0;
+    this.mercAge = 0;
+    this.mercExpectancy = 0;
     this.earthDays = age;
     this.earthExpectancy = expectancy;
 
   }
 
-  Mercury.prototype.mercAge = function() {
+  Mercury.prototype.mercCalc = function() {
     let mercDays = parseInt(this.earthDays / this.mercYear);
     let mercExpect = parseInt(this.earthExpectancy / this.mercYear);
-    this.newAge += mercDays;
-    this.newExpectancy += mercExpect;
+    this.mercAge += mercDays;
+    this.mercExpectancy += mercExpect;
     return mercDays + " " + mercExpect;
+  }
+
+  export function Venus(age,expectancy) {
+    this.venusYear = 224.7;
+    this.venusAge = 0;
+    this.venusExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
   }
