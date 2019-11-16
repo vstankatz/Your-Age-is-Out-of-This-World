@@ -22,6 +22,7 @@ _This program was designed to allow someone to see their age according to other 
 |The program should calculate their life expectancy into Mars solar years.| 36500|(36500/1.88) = 19414.89|
 |The program should calculate their age into Jupiter solar years.| 9490|(9490/11.86) = 800.17|
 |The program should calculate their life expectancy into Jupiter solar years.| 36500|(36500/11.86) = 3077.57|
+|The program should calculate their days left to live on Earth.|(36500-9490)|27010|
 |The program should calculate their days left to live on Mercury.|(414.91-107.88)|307.03|
 |The program should calculate their days left to live on Venus.|(162.44-42.23)|120.21|
 |The program should calculate their days left to live on Mars.|(19414.89-5047.87)|14567.02|

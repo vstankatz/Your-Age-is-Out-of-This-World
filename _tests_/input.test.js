@@ -56,11 +56,18 @@ describe('Input', () => {
     expect(newDays.jupiterCalc()).toEqual("800 3077")
   });
 
-  test('should subtract days lived form days expected', () => {
+  test('should subtract mercury days lived from mercury days expected', () => {
     let newDeath = new Input(26,100);
+    console.log(newDeath.mercAge);
     newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
-    console.log(newDeath.ageDays);
-    expect(newDeath.expectAndSee()).toEqual(27010)
+    newDeath.mercCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.venusCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.marsCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.jupiterCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    console.log(newDeath.mercAge);
+    console.log(newDeath.mercExpectancy);
+    console.log(newDeath.mercTime);
+    expect(newDeath.expectAndSee(newDeath.mercTime)).toEqual("You have this many days to live on each planet Earth: 135050, Mercury: 614, Venus: 361, Mars: 57468, Jupiter: 11387.");
   });
 
   test('should make the number positive if they expectancy is surpassed', () => {
@@ -70,4 +77,6 @@ describe('Input', () => {
     expect(newDeath.expectAndSee()).toEqual(2920)
   });
 
+
+    // expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy))).toEqual("9490 36500");
 });

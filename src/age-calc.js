@@ -85,6 +85,7 @@ export class Input {
     return jupiterDays + " " + jupiterExpect;
   }
 
+
   expectAndSee() {
     this.earthTime = (this.expectancyDays - this.ageDays);
     this.mercTime = (this.mercExpectancy - this.mercAge);
@@ -92,12 +93,14 @@ export class Input {
     this.marsTime = (this.marsExpectancy - this.marsAge);
     this.jupiterTime = (this.jupiterExpectancy - this.jupiterAge);
     if ((this.expectancyDays - this.ageDays) > 0){
-      return this.earthTime;
+      return `You have this many days to live on each planet Earth: ${this.earthTime}, Mercury: ${this.mercTime}, Venus: ${this.venusTime}, Mars: ${this.marsTime}, Jupiter: ${this.jupiterTime}.`
     } else if ((this.expectancyDays - this.ageDays) < 0){
         this.earthTime = Math.abs(this.earthTime);
         return this.earthTime
     }
   }
+
+
 }
 
 
