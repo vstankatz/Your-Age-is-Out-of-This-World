@@ -58,3 +58,11 @@ export function Mercury(age,expectancy) {
     this.earthDays = age;
     this.earthExpectancy = expectancy;
   }
+
+  Venus.prototype.venusCalc = function() {
+    let venusDays = parseInt(this.earthDays / this.venusYear);
+    let venusExpect = parseInt(this.earthExpectancy / this.venusYear);
+    this.venusAge += venusDays;
+    this.venusExpectancy += venusExpect;
+    return venusDays + " " + venusExpect;
+  }

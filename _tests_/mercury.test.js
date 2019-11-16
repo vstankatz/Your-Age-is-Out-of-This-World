@@ -12,5 +12,5 @@ describe('Mercury', () => {
   test('should convert earth days to mercury', () => {
     let newDays = new Mercury(9490,36500);
     expect(newDays.mercCalc()).toEqual("107 414")
-  })
+  });
 });
