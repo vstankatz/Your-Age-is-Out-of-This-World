@@ -28,10 +28,4 @@ describe('Input', () => {
     expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy)) ).toEqual("9490 36500");
   });
 
-  // test('should multiply the expectancy by 365', () => {
-  //   let newExpect = new Input(26, 100);
-  //   console.log(newExpect.inputExpectancy);
-  //   console.log(newExpect.toDays(newExpect.expectancy));
-  //   expect(newExpect.toDays(newExpect.expectancy = newExpect.inputExpectancy)).toEqual(36500);
-  // });
 });

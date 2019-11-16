@@ -35,7 +35,7 @@ export function Input(inputAge,inputExpectancy) {
 
 
 export function Mercury(age,expectancy) {
-  this.mercYear = 87.97;
+    this.mercYear = 87.97;
     this.newAge = 0;
     this.newExpectancy = 0;
     this.earthDays = age;
@@ -44,5 +44,9 @@ export function Mercury(age,expectancy) {
   }
 
   Mercury.prototype.mercAge = function() {
-
+    let mercDays = parseInt(this.earthDays / this.mercYear);
+    let mercExpect = parseInt(this.earthExpectancy / this.mercYear);
+    this.newAge += mercDays;
+    this.newExpectancy += mercExpect;
+    return mercDays + " " + mercExpect;
   }
