@@ -82,3 +82,19 @@ export function Mercury(age,expectancy) {
     this.marsExpectancy += marsExpect;
     return marsDays + " " + marsExpect;
   }
+
+  export function Jupiter(age,expectancy) {
+    this.jupiterYear = 11.86;
+    this.jupiterAge = 0;
+    this.jupiterExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
+  }
+
+  Jupiter.prototype.jupiterCalc = function() {
+    let jupiterDays = parseInt(this.earthDays / this.jupiterYear);
+    let jupiterExpect = parseInt(this.earthExpectancy / this.jupiterYear);
+    this.jupiterAge += jupiterDays;
+    this.jupiterExpectancy += jupiterExpect;
+    return jupiterDays + " " + jupiterExpect;
+  }
