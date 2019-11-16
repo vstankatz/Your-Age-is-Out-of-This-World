@@ -28,14 +28,33 @@ describe('Input', () => {
     expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy))).toEqual("9490 36500");
   });
 
+  //THIS IS THE BEGINNING OF THE SECOND METHOD WHICH USES CLASSES INSTEAD OF STANDARD FUNCTIONS.
+
   test('should convert earth days to mercury', () => {
     let newDays = new Input(26,100);
     newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    console.log(newDays.ageDays);
     expect(newDays.mercCalc()).toEqual("107 414")
   });
 
+  test('should convert earth days to venus', () => {
+    let newDays = new Input(26,100);
+    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
+    expect(newDays.venusCalc()).toEqual("42 162")
+  });
 
+  test('should convert earth days to mars', () => {
+    let newDays = new Input(26,100);
+    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
+    console.log(newDays.ageDays);
+    expect(newDays.marsCalc()).toEqual("5047 19414")
+  });
+
+  test('should convert earth days to jupiter', () => {
+    let newDays = new Input(26,100);
+    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
+    console.log(newDays.ageDays);
+    expect(newDays.jupiterCalc()).toEqual("800 3077")
+  });
 
 });
 
