@@ -28,6 +28,7 @@ _This program was designed to allow someone to see their age according to other 
 |The program should calculate their days left to live on Mars.|(19414.89-5047.87)|14367.02|
 |The program should calculate their days left to live on Jupiter.|(3077.57-800.17)|2277.4|
 |If the life expectancy is negative the program should convert the result into positive and display the number of years lived passed their expected demise.|Age:108, Expectancy: 100, (100-108)=-8|"8 years longer than expected"|
+|If the age and expectancy are the same number the program should let the user know they don't have much time left.|Age:100, Expectancy:100|"Uh Oh, best be careful on all planets because you're expected to die this year!"|
 
 ## Setup-Installation Requirements
 
@@ -41,16 +42,16 @@ _This program was designed to allow someone to see their age according to other 
 
 
 ## Known Bugs
-* _No user interface currently in place._
+* _No user interface currently in place, which leaves 6 errors when "npm run build" is run due to the "no-unsed-vars" rule._
 
 ## Technologies Suggested
 * _HTML_
 * _CSS_
 * _JavaScript_
 * _Markup_
+* _Node.js LTS 12.13.0_
 * _Jquery-3.4.1_
 * _Bootstrap 4.3.1_
-* _Node.js LTS 12.13.0_
 * _Webpack 4.39.3_
   * _Webpack-cli 3.3.8_
   * _Webpack dev server 3.8.0_
@@ -60,8 +61,8 @@ _This program was designed to allow someone to see their age according to other 
   * _Babel Core plugin 7.6.4_
     * _Babel Transform Modules 7.6.0_
     * _Popper 1.15.0_
-  * _esLint 6.3.0_
-    * _esLint Loader 3.0.0_
+  * _EsLint 6.3.0_
+    * _EsLint Loader 3.0.0_
   * _Jest 24.9.0_
   * _Style Loader 1.0.0_
   * _CSS Loader 3.2.0_
