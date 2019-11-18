@@ -25,62 +25,6 @@ describe('Input', () => {
 
   test('should multiply the years by 365', () => {
     let newAge = new Input(26, 100);
-    expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy))).toEqual("You are 9490 days old on Earth and you are expected to live to 36500 days old here.");
+    expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy))).toEqual("You are 9490 days old on Earth with a life expectancy of 36500 days here!");
   });
-
-  //THIS IS THE BEGINNING OF THE SECOND METHOD WHICH USES CLASSES INSTEAD OF STANDARD FUNCTIONS.
-
-  test('should convert earth days to mercury', () => {
-    let newDays = new Input(26,100);
-    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    expect(newDays.mercCalc()).toEqual("You are 107 days old on Mercury and you are expected to live to 414 days old there.")
-  });
-
-  test('should convert earth days to venus', () => {
-    let newDays = new Input(26,100);
-    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    expect(newDays.venusCalc()).toEqual("You are 42 days old on Venus and you are expected to live to 162 days old there.")
-  });
-
-  test('should convert earth days to mars', () => {
-    let newDays = new Input(26,100);
-    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    console.log(newDays.ageDays);
-    expect(newDays.marsCalc()).toEqual("You are 5047 days old on Mars and you are expected to live to 19414 days old there.")
-  });
-
-  test('should convert earth days to jupiter', () => {
-    let newDays = new Input(26,100);
-    newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    console.log(newDays.ageDays);
-    expect(newDays.jupiterCalc()).toEqual("You are 800 days old on Jupiter and you are expected to live to 3077 days old there.")
-  });
-
-  test('should subtract mercury days lived from mercury days expected', () => {
-    let newDeath = new Input(26,100);
-    console.log(newDeath.mercAge);
-    newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
-    newDeath.mercCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.venusCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.marsCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.jupiterCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    console.log(newDeath.mercAge);
-    console.log(newDeath.mercExpectancy);
-    console.log(newDeath.mercTime);
-    expect(newDeath.expectAndSee()).toEqual("You have this many days to live on each planet-- Earth: 135050, Mercury: 614, Venus: 361, Mars: 57468, Jupiter: 11387.");
-  });
-
-  test('should make the number positive if they expectancy is surpassed', () => {
-    let newDeath = new Input(108,100);
-    newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
-    newDeath.mercCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.venusCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.marsCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.jupiterCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    console.log(newDeath.ageDays);
-    expect(newDeath.expectAndSee()).toEqual(("Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: 14600, Mercury: 67, Venus: 39, Mars: 6213, Jupiter: 1231."))
-  });
-
-
-    // expect(newAge.toDays((newAge.age = newAge.inputAge),(newAge.expectancy = newAge.inputExpectancy))).toEqual("9490 36500");
 });

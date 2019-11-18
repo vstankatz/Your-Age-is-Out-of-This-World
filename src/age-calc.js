@@ -1,4 +1,6 @@
-export class Input {
+//This was my Second Method for completin the project but I think this is more what you wanted since the prompt said  "create a class that can..." so it's all just one class. My initial idea was to make multiple classes that extended off of an Input class but I was unable to test it using "extends" or "supers". I then built the program using standard constructor functions which you can see in the First Method on line 114.
+
+export class Input2 {
   constructor(inputAge,inputExpectancy) {
     this.inputAge = inputAge;
     this.inputExpectancy = inputExpectancy;
@@ -109,107 +111,116 @@ export class Input {
 
 
 
+// Below was my first successful method for completing the project after I couldn't get Class functions to work with an "extends" and "super" in Jest testing.
 
 
+export function Input(inputAge,inputExpectancy) {
+    this.inputAge = inputAge;
+    this.inputExpectancy = inputExpectancy;
+    this.earthYear = 365;
+    this.age = 0;
+    this.ageDays = 0;
+    this.expectancy = 0;
+    this.expectancyDays = 0;
+  }
 
-// export function Input(inputAge,inputExpectancy) {
-//     this.inputAge = inputAge;
-//     this.inputExpectancy = inputExpectancy;
-//     this.earthYear = 365;
-//     this.age = 0;
-//     this.ageDays = 0;
-//     this.expectancy = 0;
-//     this.expectancyDays = 0;
-//   }
-//
-//   Input.prototype.convertToNum = function() {
-//     if ((isNaN(this.inputAge)) || (isNaN(this.inputExpectancy)))  {
-//       return "enter a number."
-//     } else if ((typeof this.inputAge === 'string') || (typeof this.inputExpectancy === 'string')) {
-//       let age = parseInt(this.inputAge);
-//       let expectancy = parseInt(this.inputExpectancy);
-//       this.age += age;
-//       this.expectancy += expectancy;
-//       return this.age + " " + this.expectancy;
-//     } else {
-//       this.age += this.inputAge;
-//       this.expectancy += this.inputExpectancy;
-//       return this.age + " " + this.expectancy;
-//     }
-//
-//   }
-//
-//   Input.prototype.toDays = function() {
-//     let earthDays = (this.age * this.earthYear);
-//     let expectDays = (this.expectancy * this.earthYear);
-//     this.earthDays += earthDays;
-//     this.expectancyDays += expectDays;
-//     return earthDays + " " + expectDays;
-//   }
-//
-//
-// export function Mercury(age,expectancy) {
-//     this.mercYear = 87.97;
-//     this.mercAge = 0;
-//     this.mercExpectancy = 0;
-//     this.earthDays = age;
-//     this.earthExpectancy = expectancy;
-//
-//   }
-//
-//   Mercury.prototype.mercCalc = function() {
-//     let mercDays = parseInt(this.earthDays / this.mercYear);
-//     let mercExpect = parseInt(this.earthExpectancy / this.mercYear);
-//     this.mercAge += mercDays;
-//     this.mercExpectancy += mercExpect;
-//     return mercDays + " " + mercExpect;
-//   }
-//
-//
-//   export function Venus(age,expectancy) {
-//     this.venusYear = 224.7;
-//     this.venusAge = 0;
-//     this.venusExpectancy = 0;
-//     this.earthDays = age;
-//     this.earthExpectancy = expectancy;
-//   }
-//
-//   Venus.prototype.venusCalc = function() {
-//     let venusDays = parseInt(this.earthDays / this.venusYear);
-//     let venusExpect = parseInt(this.earthExpectancy / this.venusYear);
-//     this.venusAge += venusDays;
-//     this.venusExpectancy += venusExpect;
-//     return venusDays + " " + venusExpect;
-//   }
-//
-//   export function Mars(age,expectancy) {
-//     this.marsYear = 1.88;
-//     this.marsAge = 0;
-//     this.marsExpectancy = 0;
-//     this.earthDays = age;
-//     this.earthExpectancy = expectancy;
-//   }
-//
-//   Mars.prototype.marsCalc = function() {
-//     let marsDays = parseInt(this.earthDays / this.marsYear);
-//     let marsExpect = parseInt(this.earthExpectancy / this.marsYear);
-//     this.marsAge += marsDays;
-//     this.marsExpectancy += marsExpect;
-//     return marsDays + " " + marsExpect;
-//   }
-//
-//   export function Jupiter(age,expectancy) {
-//     this.jupiterYear = 11.86;
-//     this.jupiterAge = 0;
-//     this.jupiterExpectancy = 0;
-//     this.earthDays = age;
-//     this.earthExpectancy = expectancy;
-//   }
-//
-//   Jupiter.prototype.jupiterCalc = function() {
-//     let jupiterDays = parseInt(this.earthDays / this.jupiterYear);
-//     let jupiterExpect = parseInt(this.earthExpectancy / this.jupiterYear);
-//     this.jupiterAge += jupiterDays;
-//     this.jupiterExpectancy += jupiterExpect;
-//     return jupiterDays + " " + jupiterExpect;
-//   }
+  Input.prototype.convertToNum = function() {
+    if ((isNaN(this.inputAge)) || (isNaN(this.inputExpectancy)))  {
+      return "enter a number."
+    } else if ((typeof this.inputAge === 'string') || (typeof this.inputExpectancy === 'string')) {
+      let age = parseInt(this.inputAge);
+      let expectancy = parseInt(this.inputExpectancy);
+      this.age += age;
+      this.expectancy += expectancy;
+      return this.age + " " + this.expectancy;
+    } else {
+      this.age += this.inputAge;
+      this.expectancy += this.inputExpectancy;
+      return this.age + " " + this.expectancy;
+    }
+
+  }
+
+  Input.prototype.toDays = function() {
+    let earthDays = (this.age * this.earthYear);
+    let expectDays = (this.expectancy * this.earthYear);
+    this.earthDays += earthDays;
+    this.expectancyDays += expectDays;
+    return "You are " + earthDays + " days old on Earth with a life expectancy of " + expectDays + " days here!";
+  }
+
+
+export function Mercury(age,expectancy) {
+    this.mercYear = 87.97;
+    this.mercAge = 0;
+    this.mercExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
+    this.mercTime = 0;
+
+  }
+
+  Mercury.prototype.mercCalc = function() {
+    let mercDays = parseInt(this.earthDays / this.mercYear);
+    let mercExpect = parseInt(this.earthExpectancy / this.mercYear);
+    this.mercAge += mercDays;
+    this.mercExpectancy += mercExpect;
+    return "You are " + mercDays + " days old on Mercury with a life expectancy of " + mercExpect + " days here!";
+
+  }
+
+  Mercury.prototype.expectAndSee = function() {
+    this.mercTime = (this.mercExpectancy - this.mercAge);
+    if((this.mercExpectancy - this.mercAge) > 0) {
+      return "You have " + this.mercTime + " days left to live on Mercury.";
+    }
+  }
+
+
+  export function Venus(age,expectancy) {
+    this.venusYear = 224.7;
+    this.venusAge = 0;
+    this.venusExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
+  }
+
+  Venus.prototype.venusCalc = function() {
+    let venusDays = parseInt(this.earthDays / this.venusYear);
+    let venusExpect = parseInt(this.earthExpectancy / this.venusYear);
+    this.venusAge += venusDays;
+    this.venusExpectancy += venusExpect;
+    return "You are " + venusDays + " days old on Venus with a life expectancy of " + venusExpect + " days here!";
+  }
+
+  export function Mars(age,expectancy) {
+    this.marsYear = 1.88;
+    this.marsAge = 0;
+    this.marsExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
+  }
+
+  Mars.prototype.marsCalc = function() {
+    let marsDays = parseInt(this.earthDays / this.marsYear);
+    let marsExpect = parseInt(this.earthExpectancy / this.marsYear);
+    this.marsAge += marsDays;
+    this.marsExpectancy += marsExpect;
+    return "You are " + marsDays + " days old on Mars with a life expectancy of " + marsExpect + " days here!";
+  }
+
+  export function Jupiter(age,expectancy) {
+    this.jupiterYear = 11.86;
+    this.jupiterAge = 0;
+    this.jupiterExpectancy = 0;
+    this.earthDays = age;
+    this.earthExpectancy = expectancy;
+  }
+
+  Jupiter.prototype.jupiterCalc = function() {
+    let jupiterDays = parseInt(this.earthDays / this.jupiterYear);
+    let jupiterExpect = parseInt(this.earthExpectancy / this.jupiterYear);
+    this.jupiterAge += jupiterDays;
+    this.jupiterExpectancy += jupiterExpect;
+    return "You are " + jupiterDays + " days old on Jupiter with a life expectancy of " + jupiterExpect + " days here!";
+  }
