@@ -15,7 +15,6 @@ describe('Venus', () => {
 
   test('should subtract days lived from days expected', () => {
     let newVenus = new Venus(9490,36500);
-    console.log(newVenus.mercTime);
     newVenus.expectAndSee(newVenus.venusCalc(9490,36500));
     expect(newVenus.expectAndSee()).toEqual("You have 120 days left to live on Venus.")
   });

@@ -16,7 +16,6 @@ describe('Mercury', () => {
 
   test('should subtract days lived from days expected', () => {
     let newMerc = new Mercury(9490,36500);
-    console.log(newMerc.mercTime);
     newMerc.expectAndSee(newMerc.mercCalc(9490,36500));
     expect(newMerc.expectAndSee()).toEqual("You have 307 days left to live on Mercury.")
   });

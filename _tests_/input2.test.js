@@ -45,28 +45,23 @@ describe('Input2', () => {
   test('should convert earth days to mars', () => {
     let newDays = new Input2(26,100);
     newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    console.log(newDays.ageDays);
     expect(newDays.marsCalc()).toEqual("You are 5047 days old on Mars and you are expected to live to 19414 days old there.")
   });
 
   test('should convert earth days to jupiter', () => {
     let newDays = new Input2(26,100);
     newDays.toDays((newDays.age = newDays.inputAge),(newDays.expectancy = newDays.inputExpectancy));
-    console.log(newDays.ageDays);
     expect(newDays.jupiterCalc()).toEqual("You are 800 days old on Jupiter and you are expected to live to 3077 days old there.")
   });
 
   test('should subtract mercury days lived from mercury days expected', () => {
     let newDeath = new Input2(26,100);
-    console.log(newDeath.mercAge);
+
     newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
     newDeath.expectAndSee(newDeath.mercCalc(9490,36500));
     newDeath.expectAndSee(newDeath.venusCalc(9490,36500));
     newDeath.expectAndSee(newDeath.marsCalc(9490,36500));
     newDeath.expectAndSee(newDeath.jupiterCalc(9490,36500));
-    console.log(newDeath.mercAge);
-    console.log(newDeath.mercExpectancy);
-    console.log(newDeath.mercTime);
     expect(newDeath.expectAndSee()).toEqual("You have this many days to live on each planet-- Earth: 27010, Mercury: 307, Venus: 120, Mars: 14367, Jupiter: 2277.");
   });
 
