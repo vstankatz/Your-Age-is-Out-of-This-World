@@ -103,6 +103,8 @@ export class Input2 {
         this.marsTime = Math.abs(this.marsTime);
         this.jupiterTime = Math.abs(this.jupiterTime);
         return `Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: ${this.earthTime}, Mercury: ${this.mercTime}, Venus: ${this.venusTime}, Mars: ${this.marsTime}, Jupiter: ${this.jupiterTime}.`
+    } else {
+      return `Uh Oh, best be careful on all planets because you're expected to die this year!`
     }
   }
 
@@ -176,6 +178,8 @@ export function Mercury(age,expectancy) {
     } else if ((this.mercExpectancy - this.mercAge) < 0) {
       this.mercTime = Math.abs(this.mercTime);
       return "Well done! You have lived past your expected demise by " + this.mercTime + " days on Mercury!"
+    } else {
+      return `Uh Oh, best be careful on all planets because you're expected to die this year!`
     }
   }
 
@@ -203,6 +207,8 @@ export function Mercury(age,expectancy) {
     } else if ((this.venusExpectancy - this.venusAge) < 0) {
       this.venusTime = Math.abs(this.venusTime);
       return "Well done! You have lived past your expected demise by " + this.venusTime + " days on Venus!"
+    } else {
+      return `Uh Oh, best be careful on all planets because you're expected to die this year!`
     }
   }
 
@@ -229,6 +235,8 @@ export function Mercury(age,expectancy) {
     } else if ((this.marsExpectancy - this.marsAge) < 0) {
       this.marsTime = Math.abs(this.marsTime);
       return "Well done! You have lived past your expected demise by " + this.marsTime + " days on Mars!"
+    } else {
+      return `Uh Oh, best be careful on all planets because you're expected to die this year!`
     }
   }
 
@@ -255,5 +263,7 @@ export function Mercury(age,expectancy) {
     } else if ((this.jupiterExpectancy - this.jupiterAge) < 0) {
       this.jupiterTime = Math.abs(this.jupiterTime);
       return "Well done! You have lived past your expected demise by " + this.jupiterTime + " days on Jupiter!"
+    } else {
+      return `Uh Oh, best be careful on all planets because you're expected to die this year!`
     }
   }

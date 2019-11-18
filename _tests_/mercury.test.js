@@ -26,4 +26,10 @@ describe('Mercury', () => {
     newDeath.expectAndSee(newDeath.mercCalc(39420,36500));
     expect(newDeath.expectAndSee()).toEqual(("Well done! You have lived past your expected demise by 34 days on Mercury!"))
   });
+
+  test('should return a message if there is a life expectancy of 0 years', () => {
+    let newDeath = new Mercury(100,100);
+    newDeath.expectAndSee(newDeath.mercCalc(336500,36500));
+        expect(newDeath.expectAndSee()).toEqual("Uh Oh, best be careful on all planets because you're expected to die this year!")
+  });
 });

@@ -25,4 +25,10 @@ describe('Venus', () => {
     newDeath.expectAndSee(newDeath.venusCalc(39420,36500));
     expect(newDeath.expectAndSee()).toEqual(("Well done! You have lived past your expected demise by 13 days on Venus!"))
   });
+
+  test('should return a message if there is a life expectancy of 0 years', () => {
+    let newDeath = new Venus(100,100);
+    newDeath.expectAndSee(newDeath.venusCalc(336500,36500));
+        expect(newDeath.expectAndSee()).toEqual("Uh Oh, best be careful on all planets because you're expected to die this year!")
+  });
 });

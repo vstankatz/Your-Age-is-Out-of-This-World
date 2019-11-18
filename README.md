@@ -31,28 +31,40 @@ _This program was designed to allow someone to see their age according to other 
 
 ## Setup-Installation Requirements
 
-* _https://vstankatz.github.io/PizzaPlanet-Take-Your-Order/_
-* _Click the enter button on the landing page._
-* _Fill out the order form as desired._
-* _Click "Save Pizza"._
-* _Add more pizzas as desired._
-* _To display pizza details click on the pizza you'd like to see._
-* _When satisfied click "Continue"._
-* _Pick delivery option and click "Continue"._
-* _Confirm order details and click "Submit Order"._
+* _https://github.com/vstankatz/Your-Age-is-Out-of-This-World_
+* _Clone the GitHub repository._
+* _Make sure Node.js is installed on your device._
+* _Run NPM install to load the necessary packages._
+* _Run NPM run build to make sure program are properly installed._
+* _Run NPM test to verify all function work properly._
+* _Review JavaScript of the two function options created._
+
 
 ## Known Bugs
-
+* _No user interface currently in place._
 
 ## Technologies Suggested
 * _HTML_
 * _CSS_
+* _JavaScript_
 * _Markup_
 * _Jquery-3.4.1_
-* _Bootstrap 3.4_
-
-HTML, CSS, JavaScript, jQuery, clean-webpack-plugin 3.0.0, css-loader 3.2.0, eslint 6.3.0, eslint-loader 3.0.0, html-webpack-plugin 3.2.0, style-loader 1.0.0, uglifyjs-webpack-plugin 2.2.0, webpack 4.39.3, webpack-cli 3.3.8, and webpack-dev-server 3.8.0.
-Project was written using Google Chrome; no other browsers were tested for compatibility.
+* _Bootstrap 4.3.1_
+* _Node.js LTS 12.13.0_
+* _Webpack 4.39.3_
+  * _Webpack-cli 3.3.8_
+  * _Webpack dev server 3.8.0_
+  * _Uglify Plugin 2.2.0_
+  * _Clean Webpack Plugin 3.0.0_
+  * _HTML Webpack Plugin 3.2.0_
+  * _Babel Core plugin 7.6.4_
+    * _Babel Transform Modules 7.6.0_
+    * _Popper 1.15.0_
+  * _esLint 6.3.0_
+    * _esLint Loader 3.0.0_
+  * _Jest 24.9.0_
+  * _Style Loader 1.0.0_
+  * _CSS Loader 3.2.0_
 
 
 ## License

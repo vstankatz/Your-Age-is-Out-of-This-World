@@ -77,7 +77,13 @@ describe('Input2', () => {
     newDeath.expectAndSee(newDeath.venusCalc(39420,36500));
     newDeath.expectAndSee(newDeath.marsCalc(39420,36500));
     newDeath.expectAndSee(newDeath.jupiterCalc(39420,36500));
-    expect(newDeath.expectAndSee()).toEqual(("Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: 2920, Mercury: 34, Venus: 13, Mars: 1554, Jupiter: 246."))
+    expect(newDeath.expectAndSee()).toEqual("Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: 2920, Mercury: 34, Venus: 13, Mars: 1554, Jupiter: 246.")
+  });
+
+  test('should return a message if there is a life expectancy of 0 years', () => {
+    let newDeath = new Input2(100,100);
+        newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
+        expect(newDeath.expectAndSee()).toEqual("Uh Oh, best be careful on all planets because you're expected to die this year!")
   });
 
 });
