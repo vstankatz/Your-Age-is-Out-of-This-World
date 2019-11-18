@@ -49,7 +49,7 @@ export class Input {
     let expectDays = (this.expectancy * this.earthYear);
     this.ageDays += earthDays;
     this.expectancyDays += expectDays;
-    return earthDays + " " + expectDays;
+    return `You are ${earthDays} days old on Earth and you are expected to live to ${expectDays} days old here.`;
   }
 
   mercCalc() {
@@ -58,7 +58,7 @@ export class Input {
     let mercExpect = parseInt(this.expectancyDays / this.mercYear);
     this.mercAge += mercDays;
     this.mercExpectancy += mercExpect;
-    return mercDays + " " + mercExpect;
+    return `You are ${mercDays} days old on Mercury and you are expected to live to ${mercExpect} days old there.`;
   }
 
   venusCalc() {
@@ -66,7 +66,7 @@ export class Input {
     let venusExpect = parseInt(this.expectancyDays / this.venusYear);
     this.venusAge += venusDays;
     this.venusExpectancy += venusExpect;
-    return venusDays + " " + venusExpect;
+    return `You are ${venusDays} days old on Venus and you are expected to live to ${venusExpect} days old there.`;
   }
 
   marsCalc() {
@@ -74,7 +74,7 @@ export class Input {
     let marsExpect = parseInt(this.expectancyDays / this.marsYear);
     this.marsAge += marsDays;
     this.marsExpectancy += marsExpect;
-    return marsDays + " " + marsExpect;
+    return `You are ${marsDays} days old on Mars and you are expected to live to ${marsExpect} days old there.`;
   }
 
   jupiterCalc() {
@@ -82,7 +82,7 @@ export class Input {
     let jupiterExpect = parseInt(this.expectancyDays / this.jupiterYear);
     this.jupiterAge += jupiterDays;
     this.jupiterExpectancy += jupiterExpect;
-    return jupiterDays + " " + jupiterExpect;
+    return `You are ${jupiterDays} days old on Jupiter and you are expected to live to ${jupiterExpect} days old there.`;
   }
 
 
