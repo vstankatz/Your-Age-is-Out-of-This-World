@@ -20,4 +20,10 @@ describe('Mercury', () => {
     newMerc.expectAndSee(newMerc.mercCalc(9490,36500));
     expect(newMerc.expectAndSee()).toEqual("You have 307 days left to live on Mercury.")
   });
+
+  test('should make the number positive if the expectancy is surpassed', () => {
+    let newDeath = new Mercury(39420,36500);
+    newDeath.expectAndSee(newDeath.mercCalc(39420,36500));
+    expect(newDeath.expectAndSee()).toEqual(("Well done! You have lived past your expected demise by 34 days on Mercury!"))
+  });
 });

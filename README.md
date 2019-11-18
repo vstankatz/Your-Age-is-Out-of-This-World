@@ -25,7 +25,7 @@ _This program was designed to allow someone to see their age according to other 
 |The program should calculate their days left to live on Earth.|(36500-9490)|27010|
 |The program should calculate their days left to live on Mercury.|(414.91-107.88)|307.03|
 |The program should calculate their days left to live on Venus.|(162.44-42.23)|120.21|
-|The program should calculate their days left to live on Mars.|(19414.89-5047.87)|14567.02|
+|The program should calculate their days left to live on Mars.|(19414.89-5047.87)|14367.02|
 |The program should calculate their days left to live on Jupiter.|(3077.57-800.17)|2277.4|
 |If the life expectancy is negative the program should convert the result into positive and display the number of years lived passed their expected demise.|Age:108, Expectancy: 100, (100-108)=-8|"8 years longer than expected"|
 

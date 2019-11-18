@@ -12,4 +12,17 @@ describe('Venus', () => {
     let newDays = new Venus(9490,36500);
     expect(newDays.venusCalc()).toEqual("You are 42 days old on Venus with a life expectancy of 162 days here!")
   });
+
+  test('should subtract days lived from days expected', () => {
+    let newVenus = new Venus(9490,36500);
+    console.log(newVenus.mercTime);
+    newVenus.expectAndSee(newVenus.venusCalc(9490,36500));
+    expect(newVenus.expectAndSee()).toEqual("You have 120 days left to live on Venus.")
+  });
+
+  test('should make the number positive if the expectancy is surpassed', () => {
+    let newDeath = new Venus(39420,36500);
+    newDeath.expectAndSee(newDeath.venusCalc(39420,36500));
+    expect(newDeath.expectAndSee()).toEqual(("Well done! You have lived past your expected demise by 13 days on Venus!"))
+  });
 });

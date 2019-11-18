@@ -173,6 +173,9 @@ export function Mercury(age,expectancy) {
     this.mercTime = (this.mercExpectancy - this.mercAge);
     if((this.mercExpectancy - this.mercAge) > 0) {
       return "You have " + this.mercTime + " days left to live on Mercury.";
+    } else if ((this.mercExpectancy - this.mercAge) < 0) {
+      this.mercTime = Math.abs(this.mercTime);
+      return "Well done! You have lived past your expected demise by " + this.mercTime + " days on Mercury!"
     }
   }
 
@@ -193,6 +196,16 @@ export function Mercury(age,expectancy) {
     return "You are " + venusDays + " days old on Venus with a life expectancy of " + venusExpect + " days here!";
   }
 
+  Venus.prototype.expectAndSee = function() {
+    this.venusTime = (this.venusExpectancy - this.venusAge);
+    if((this.venusExpectancy - this.venusAge) > 0) {
+      return "You have " + this.venusTime + " days left to live on Venus.";
+    } else if ((this.venusExpectancy - this.venusAge) < 0) {
+      this.venusTime = Math.abs(this.venusTime);
+      return "Well done! You have lived past your expected demise by " + this.venusTime + " days on Venus!"
+    }
+  }
+
   export function Mars(age,expectancy) {
     this.marsYear = 1.88;
     this.marsAge = 0;
@@ -209,6 +222,16 @@ export function Mercury(age,expectancy) {
     return "You are " + marsDays + " days old on Mars with a life expectancy of " + marsExpect + " days here!";
   }
 
+  Mars.prototype.expectAndSee = function() {
+    this.marsTime = (this.marsExpectancy - this.marsAge);
+    if((this.marsExpectancy - this.marsAge) > 0) {
+      return "You have " + this.marsTime + " days left to live on Mars.";
+    } else if ((this.marsExpectancy - this.marsAge) < 0) {
+      this.marsTime = Math.abs(this.marsTime);
+      return "Well done! You have lived past your expected demise by " + this.marsTime + " days on Mars!"
+    }
+  }
+
   export function Jupiter(age,expectancy) {
     this.jupiterYear = 11.86;
     this.jupiterAge = 0;
@@ -223,4 +246,14 @@ export function Mercury(age,expectancy) {
     this.jupiterAge += jupiterDays;
     this.jupiterExpectancy += jupiterExpect;
     return "You are " + jupiterDays + " days old on Jupiter with a life expectancy of " + jupiterExpect + " days here!";
+  }
+
+  Jupiter.prototype.expectAndSee = function() {
+    this.jupiterTime = (this.jupiterExpectancy - this.jupiterAge);
+    if((this.jupiterExpectancy - this.jupiterAge) > 0) {
+      return "You have " + this.jupiterTime + " days left to live on Jupiter.";
+    } else if ((this.jupiterExpectancy - this.jupiterAge) < 0) {
+      this.jupiterTime = Math.abs(this.jupiterTime);
+      return "Well done! You have lived past your expected demise by " + this.jupiterTime + " days on Jupiter!"
+    }
   }

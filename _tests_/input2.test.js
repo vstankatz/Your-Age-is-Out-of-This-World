@@ -60,25 +60,24 @@ describe('Input2', () => {
     let newDeath = new Input2(26,100);
     console.log(newDeath.mercAge);
     newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
-    newDeath.mercCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.venusCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.marsCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.jupiterCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
+    newDeath.expectAndSee(newDeath.mercCalc(9490,36500));
+    newDeath.expectAndSee(newDeath.venusCalc(9490,36500));
+    newDeath.expectAndSee(newDeath.marsCalc(9490,36500));
+    newDeath.expectAndSee(newDeath.jupiterCalc(9490,36500));
     console.log(newDeath.mercAge);
     console.log(newDeath.mercExpectancy);
     console.log(newDeath.mercTime);
-    expect(newDeath.expectAndSee()).toEqual("You have this many days to live on each planet-- Earth: 135050, Mercury: 614, Venus: 361, Mars: 57468, Jupiter: 11387.");
+    expect(newDeath.expectAndSee()).toEqual("You have this many days to live on each planet-- Earth: 27010, Mercury: 307, Venus: 120, Mars: 14367, Jupiter: 2277.");
   });
 
-  test('should make the number positive if they expectancy is surpassed', () => {
+  test('should make the number positive if the expectancy is surpassed', () => {
     let newDeath = new Input2(108,100);
     newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy));
-    newDeath.mercCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.venusCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.marsCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-    newDeath.jupiterCalc(newDeath.toDays((newDeath.age = newDeath.inputAge),(newDeath.expectancy = newDeath.inputExpectancy)));
-
-    expect(newDeath.expectAndSee()).toEqual(("Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: 14600, Mercury: 67, Venus: 39, Mars: 6213, Jupiter: 1231."))
+    newDeath.expectAndSee(newDeath.mercCalc(39420,36500));
+    newDeath.expectAndSee(newDeath.venusCalc(39420,36500));
+    newDeath.expectAndSee(newDeath.marsCalc(39420,36500));
+    newDeath.expectAndSee(newDeath.jupiterCalc(39420,36500));
+    expect(newDeath.expectAndSee()).toEqual(("Well done! You've lived past your expected demise! Here's how many days you've been cheating the grim reaper on each planet-- Earth: 2920, Mercury: 34, Venus: 13, Mars: 1554, Jupiter: 246."))
   });
 
 });
